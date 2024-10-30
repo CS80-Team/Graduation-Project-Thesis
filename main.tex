@@ -63,7 +63,25 @@ Continuous File Synchronization System
 		
 		\section{Related Work}
 			\subsection{Currently Available Solutions}
-			
+        Several file synchronization solutions currently exist in the market, each offering distinct features and trade-offs in terms of performance, ease of use, and security. Some of the most popular file sync systems include:
+
+    \begin{itemize}
+      \item \textbf{Syncthing}: Syncthing is an open-source, decentralized file synchronization application designed to replace proprietary sync and cloud services. It enables users to synchronize files directly between devices on a local network or over the internet without storing data on third-party servers. Syncthing emphasizes data privacy, ensuring that data is encrypted during transfer and only accessible by the devices involved in the sync process. However, due to its decentralized nature, managing complex sync setups may require manual configuration.
+
+      \item \textbf{Dropbox}: Dropbox is a widely-used cloud storage service that includes file synchronization as a core feature. Dropbox offers seamless sync across multiple devices, enabling users to access files on desktop and mobile platforms. Its user-friendly interface and collaboration features make it ideal for everyday users and small teams. However, Dropbox relies on centralized storage, which can raise privacy concerns, and its file syncing speed can vary based on network and storage limitations.
+
+      \item \textbf{Google Drive}: Google Drive combines cloud storage and file synchronization, allowing users to store and access files on any device with internet connectivity. The service includes robust integration with other Google applications, such as Google Docs and Sheets, making it popular for collaborative work. However, similar to Dropbox, Google Drive uses a centralized storage model, and users must trust Google with their data privacy.
+
+      \item \textbf{OneDrive}: Microsoft OneDrive is a cloud-based solution that integrates tightly with Windows and the Microsoft Office suite. It offers both cloud storage and file synchronization features, making it a strong option for users in the Microsoft ecosystem. OneDrive provides tools for sharing and collaboration, particularly for enterprise users. Like Google Drive and Dropbox, OneDrive is centralized and may not meet the privacy needs of all users.
+
+      \item \textbf{rsync}: rsync is a command-line utility for Unix-based systems that offers efficient, incremental file synchronization. While not specifically a file sync service, rsync provides high-speed sync capabilities over networks and is popular for backups and transferring large amounts of data. However, its usage requires familiarity with command-line operations, making it less accessible to everyday users. 
+
+      \item \textbf{Nextcloud}: Nextcloud is an open-source, self-hosted cloud storage and file synchronization solution. It allows users to set up their own server, keeping full control over data. Nextcloud provides additional collaborative tools and security options tailored for businesses and privacy-focused users. However, it requires setup and maintenance on the part of the user, which may not be suitable for non-technical users.
+  \end{itemize}
+
+\subsection{Limitations of Current Solutions}
+
+While each of these solutions has its own strengths, they share certain limitations. Centralized systems, like Dropbox, Google Drive, and OneDrive, come with privacy and data ownership concerns. Decentralized and self-hosted solutions, like Syncthing and Nextcloud, address privacy but can be challenging to configure for less technical users. These tools may also face performance and reliability issues when syncing large datasets over fluctuating network connections.
 			\subsection{Features Matrix}
 			
 		\section{Software Development Methodology Used}
