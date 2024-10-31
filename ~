@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass{book}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{caption}
@@ -9,34 +9,35 @@
 \usepackage{titling}
 
 \title{
-\centering Continuous File Synchronization System
+Continuous File Synchronization System
 }
 
 \begin{document}
 
 \maketitle
-\newpage
 
-\section{Introduction}
+\chapter{Introduction}
 
-\subsection{Motivation} {
-  The increasing prevalence of multi-device usage in both personal and professional environments has created a critical need for seamless file synchronization. Users frequently work across multiple devices (laptops, smartphones, tablets) and require their files to be consistently updated and accessible across all platforms. \\ \\ We choose to develop the File Synchronization System as our graduation project because it address very interesting challenges in distributed systems and Real-time synchronization reliability. This project gives us a chance to learn more about distributed computing, networks and back-end engineering while tracking a real-life problem. Additionally, we are particularly interested in consensus protocols to ensure data consistency and resolve conflicts effectively, enhancing our understanding of these critical concepts in distributed systems.
+\section{Motivation} {
+      In today's digital age, the need for seamless, real-time file synchronization across devices has become essential. With the growth of remote work, distributed teams, and multi-device use, individuals and organizations require reliable solutions that ensure data is accessible and up-to-date without manual intervention. While cloud storage providers offer some solutions, they often come with privacy concerns, limitations on customization, and dependency on third-party servers.
+
+      To address these challenges, our graduation project focuses on developing a robust file synchronization system inspired by platforms like Syncthing, aiming for a decentralized, peer-to-peer approach that priotrizes user privacy, security, and ease of use. our intention is to eliminate reliance on centralized servers, providing users with greater control over their data while ensuring conflict-free file synchronization across devices. Through this system, we seek to contribute to the field of distributed computing by offering an alternative that enhances data accessibility and resilience
 }
 
-\subsection{Problem Statement}
+\section{Problem Statement}
 
-      \subsubsection*{Background}
+      \subsection*{Background}
       {
         In a world where digital collaboration, remote work, and data accessibility are becoming increasingly essential, users often need real-time access to the most up-to-date versions of files across multiple devices. Traditional file-sharing services can be limited by connectivity issues, centralized storage constraints, or restrictions in updating files consistently across distributed devices. Hence, developing an efficient, decentralized file synchronization system to ensure continuous file availability and consistency across multiple devices in real time is crucial.
       }
 
-      \subsubsection*{Objective}
+      \subsection*{Objective}
       {
 
         This project aims to design, develop, and implement a Continuous File Synchronization System that enables users to automatically synchronize files across devices while maintaining data integrity, handling conflicts effectively, and ensuring minimal data transfer. The system will allow users to sync files locally and remotely, with features such as file versioning, conflict resolution, and support for multiple operating systems.
       }
 
-      \subsubsection*{Scope}
+      \subsection*{Scope}
       {
         The system will:
         \begin{enumerate}
@@ -48,7 +49,7 @@
         \end{enumerate}
       }
 
-      \subsubsection*{Functional Requirements:}
+      \subsection*{Functional Requirements:}
       {
         \begin{enumerate}
           \item \textbf{Automatic Synchronization}: Detect file changes automatically and sync them across connected devices.
@@ -58,17 +59,16 @@
         \end{enumerate}
       }
 
-    \subsection{Goals}
+    \section{Goals}
       The primary goal of this project is to develop an efficient, user-friendly file synchronization system that addresses the limitations of existing solutions and provides an enhanced user experience for personal and professional use. Specifically, the objectives include:
       \begin{itemize}
         \item \textbf{Reliability and Data Integrity:} Ensure that files are synchronized accurately across devices with minimal risk of data corruption or loss. Implement robust mechanisms to verify the         integrity of synchronized data.
 
         \item \textbf{Cross-Platform Compatibility:} Support multiple operating systems (e.g., Windows, macOS, Linux) and mobile platforms, allowing seamless synchronization across diverse devices.
 		    \item \textbf{Ease of Use:} Ensure the system is straightforward to install, configure, and operate, focusing on an intuitive user interface and clear instructions.
-      \end{itemize}
 
-    \subsection{Related Work}
-			\subsubsection{Currently Available Solutions}
+    \section{Related Work}
+			\subsection{Currently Available Solutions}
         Several file synchronization solutions currently exist in the market, each offering distinct features and trade-offs in terms of performance, ease of use, and security. Some of the most popular file sync systems include:
 
     \begin{itemize}
@@ -85,41 +85,41 @@
       \item \textbf{Nextcloud}: Nextcloud is an open-source, self-hosted cloud storage and file synchronization solution. It allows users to set up their own server, keeping full control over data. Nextcloud provides additional collaborative tools and security options tailored for businesses and privacy-focused users. However, it requires setup and maintenance on the part of the user, which may not be suitable for non-technical users.
   \end{itemize}
 
-      \subsubsection{Limitations of Current Solutions}
+      \subsection{Limitations of Current Solutions}
       {
         While each of these solutions has its own strengths, they share certain limitations. Centralized systems, like Dropbox, Google Drive, and OneDrive, come with privacy and data ownership concerns. Decentralized and self-hosted solutions, like Syncthing and Nextcloud, address privacy but can be challenging to configure for less technical users. These tools may also face performance and reliability issues when syncing large datasets over fluctuating network connections.
       }
-      \subsubsection{Features Matrix}
+      \subsection{Features Matrix}
 			
-		\subsection{Software Development Methodology Used}
-    	 
-	\section{Requirements Analysis}
-		\subsection{Surveys}
-		
-		\subsection{Results of (Part 2.1) represented as charts}
-		
-		\subsection{Functional Requirements}
-		
-		\subsection{Non-functional Requirements}
-		
-		\subsection{Use Case Diagrams}
+		\section{Software Development Methodology Used}
 	
-	\section{Design}
-		\subsection{Sequence Diagrams}
+	\chapter{Requirements Analysis}
+		\section{Surveys}
 		
-		\subsection{ERD}
+		\section{Results of (Part 2.1) represented as charts}
 		
-		\subsection{Data Flow Diagrams (DFD-level 0 and DFD-level 1)}
+		\section{Functional Requirements}
 		
-		\subsection{Algorithms}
+		\section{Non-functional Requirements}
 		
-		\subsection{UML Class Diagrams}
+		\section{Use Case Diagrams}
 	
-	\section{Implementation Aspects}
-		\subsection{Overall System Architecture (Blocks diagram)}
+	\chapter{Design}
+		\section{Sequence Diagrams}
 		
-		\subsection{Tools, Technologies and/or Programming Languages}
+		\section{ERD}
 		
-		\subsection{Prototype}
+		\section{Data Flow Diagrams (DFD-level 0 and DFD-level 1)}
+		
+		\section{Algorithms}
+		
+		\section{UML Class Diagrams}
+	
+	\chapter{Implementation Aspects}
+		\section{Overall System Architecture (Blocks diagram)}
+		
+		\section{Tools, Technologies and/or Programming Languages}
+		
+		\section{Prototype}
 	
 \end{document}
