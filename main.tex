@@ -1,4 +1,4 @@
-\documentclass{book}
+\documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{caption}
@@ -9,54 +9,111 @@
 \usepackage{titling}
 
 \title{
-Continuous File Synchronization System 
+\centering Continuous File Synchronization System
 }
 
-
 \begin{document}
-	
-	\maketitle
-	
-	\chapter{Introduction}
-		\section{Motivation}
-		\section{Problem Statement}
-		
-		\section{Goals}
-		
-		\section{Related Work}
-			\subsection{Currently Available Solutions}
+
+\maketitle
+\newpage
+
+\section{Introduction}
+
+\subsection{Motivation} {
+  The increasing prevalence of multi-device usage in both personal and professional environments has created a critical need for seamless file synchronization. Users frequently work across multiple devices (laptops, smartphones, tablets) and require their files to be consistently updated and accessible across all platforms. \\ \\ We choose to develop the File Synchronization System as our graduation project because it address very interesting challenges in distributed systems and Real-time synchronization reliability. This project gives us a chance to learn more about distributed computing, networks and back-end engineering while tracking a real-life problem. Additionally, we are particularly interested in consensus protocols to ensure data consistency and resolve conflicts effectively, enhancing our understanding of these critical concepts in distributed systems.
+}
+
+\subsection{Problem Statement}
+      { In a world where digital collaboration, remote work, and data accessibility are becoming increasingly essential, users often need real-time access to the most up-to-date versions of files across multiple devices. Traditional file-sharing services can be limited by connectivity issues, centralized storage constraints, or restrictions in updating files consistently across distributed devices. Users struggle with maintaining consistent file versions across multiple devices, leading to:
+      \begin{itemize}
+        \item Version conflicts and lost work
+        \item Manual file transfer overhead
+        \item Storage redundancy
+        \item Security vulnerabilities in file sharing
+        \item Inconsistent file access across different platforms
+      \end{itemize}
+Hence, developing an efficient, decentralized file synchronization system to ensure continuous file availability and consistency across multiple devices in real time is crucial.
+      }
+
+    \subsection{Goals}
+      \textbf{he primary goal of this project is:}
+      \begin{itemize}
+        \item Develop a robust file synchronization system that maintains file consistency across multiple devices
+        \item Implement real-time synchronization with minimal latency
+		    \item Create an efficient conflict resolution mechanism
+        \item Ensure secure file transfer and storage
+      \end{itemize} \\ \textbf{From the Technical Objectives:}
+      \begin{itemize}
+        \item Design a scalable architecture supporting multiple concurrent users
+        \item Implement efficient delta-sync algorithms to minimize bandwidth usage
+        \item Develop cross-platform compatibility (Windows, macOS, Linux)
+        \item Create an intuitive user interface for managing synchronization
+      \end{itemize}
+    \subsection{Related Work}
+			\subsubsection{Currently Available Solutions}
+        Several file synchronization solutions currently exist in the market, each offering distinct features and trade-offs in terms of performance, ease of use, and security. Some of the most popular file sync systems include:
+
+    \begin{itemize}
+      \item \textbf{Syncthing}: Syncthing is an open-source, decentralized file synchronization application designed to replace proprietary sync and cloud services. It enables users to synchronize files directly between devices on a local network or over the internet without storing data on third-party servers. Syncthing emphasizes data privacy, ensuring that data is encrypted during transfer and only accessible by the devices involved in the sync process. However, due to its decentralized nature, managing complex sync setups may require manual configuration.
+
+      \item \textbf{Dropbox}: Dropbox is a widely-used cloud storage service that includes file synchronization as a core feature. Dropbox offers seamless sync across multiple devices, enabling users to access files on desktop and mobile platforms. Its user-friendly interface and collaboration features make it ideal for everyday users and small teams. However, Dropbox relies on centralized storage, which can raise privacy concerns, and its file syncing speed can vary based on network and storage limitations.
+
+      \item \textbf{Google Drive}: Google Drive combines cloud storage and file synchronization, allowing users to store and access files on any device with internet connectivity. The service includes robust integration with other Google applications, such as Google Docs and Sheets, making it popular for collaborative work. However, similar to Dropbox, Google Drive uses a centralized storage model, and users must trust Google with their data privacy.
+
+      \item \textbf{OneDrive}: Microsoft OneDrive is a cloud-based solution that integrates tightly with Windows and the Microsoft Office suite. It offers both cloud storage and file synchronization features, making it a strong option for users in the Microsoft ecosystem. OneDrive provides tools for sharing and collaboration, particularly for enterprise users. Like Google Drive and Dropbox, OneDrive is centralized and may not meet the privacy needs of all users.
+
+      \item \textbf{rsync}: rsync is a command-line utility for Unix-based systems that offers efficient, incremental file synchronization. While not specifically a file sync service, rsync provides high-speed sync capabilities over networks and is popular for backups and transferring large amounts of data. However, its usage requires familiarity with command-line operations, making it less accessible to everyday users. 
+
+      \item \textbf{Nextcloud}: Nextcloud is an open-source, self-hosted cloud storage and file synchronization solution. It allows users to set up their own server, keeping full control over data. Nextcloud provides additional collaborative tools and security options tailored for businesses and privacy-focused users. However, it requires setup and maintenance on the part of the user, which may not be suitable for non-technical users.
+  \end{itemize}
+
+      \subsubsection{Limitations of Current Solutions}
+      {
+        While each of these solutions has its own strengths, they share certain limitations. Centralized systems, like Dropbox, Google Drive, and OneDrive, come with privacy and data ownership concerns. Decentralized and self-hosted solutions, like Syncthing and Nextcloud, address privacy but can be challenging to configure for less technical users. These tools may also face performance and reliability issues when syncing large datasets over fluctuating network connections.
+      }
+      \subsubsection{Features Matrix}
 			
-			\subsection{Features Matrix}
-			
-		\section{Software Development Methodology Used}
+		\subsection{Software Development Methodology Used: Scrum}
+        Scrum is an Agile framework that emphasizes iterative and incremental
+        development, with a focus on flexibility, collaboration, and continuous
+        improvement. \\
+
+        We chose to use Scrum for the following reasons:
+        \begin{enumerate}
+          \item Adaptability: Scrum's iterative approach allows us to respond quickly to changing requirements and priorities, ensuring the final product aligns with the evolving needs of our users.
+          \item Transparency: The Scrum framework promotes transparency through regular feedback, reviews, and retrospectives, enabling our team to identify and address issues early in the development process.
+          \item Collaboration: Scrum encourages close collaboration between the development team, stakeholders, and the product owner, fostering a shared understanding of the project goals and requirements.
+          \item Efficiency: The Scrum methodology's emphasis on short development cycles (sprints) and continuous delivery helps us optimize our workflow and deliver value to our users in a timely manner.
+          \item Continuous Improvement: Scrum's built-in mechanisms for retrospection and iteration allow our team to continuously learn, experiment, and improve our processes, leading to better quality and increased productivity over time.
+        \end{enumerate}
+       By adopting the Scrum methodology, our team is well-equipped to navigate the complexities of this file synchronization system project and deliver a high-quality, responsive, and user-centric solution.
+	\section{Requirements Analysis}
+		\subsection{Surveys}
+		
+		\subsection{Results of (Part 2.1) represented as charts}
+		
+		\subsection{Functional Requirements}
+		
+		\subsection{Non-functional Requirements}
+		
+		\subsection{Use Case Diagrams}
 	
-	\chapter{Requirements Analysis}
-		\section{Surveys}
+	\section{Design}
+		\subsection{Sequence Diagrams}
 		
-		\section{Results of (Part 2.1) represented as charts}
+		\subsection{ERD}
 		
-		\section{Functional Requirements}
+		\subsection{Data Flow Diagrams (DFD-level 0 and DFD-level 1)}
 		
-		\section{Non-functional Requirements}
+		\subsection{Algorithms}
 		
-		\section{Use Case Diagrams}
+		\subsection{UML Class Diagrams}
 	
-	\chapter{Design}
-		\section{Sequence Diagrams}
+	\section{Implementation Aspects}
+		\subsection{Overall System Architecture (Blocks diagram)}
 		
-		\section{ERD}
+		\subsection{Tools, Technologies and/or Programming Languages}
 		
-		\section{Data Flow Diagrams (DFD-level 0 and DFD-level 1)}
-		
-		\section{Algorithms}
-		
-		\section{UML Class Diagrams}
-	
-	\chapter{Implementation Aspects}
-		\section{Overall System Architecture (Blocks diagram)}
-		
-		\section{Tools, Technologies and/or Programming Languages}
-		
-		\section{Prototype}
+		\subsection{Prototype}
 	
 \end{document}
