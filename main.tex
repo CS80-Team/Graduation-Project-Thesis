@@ -24,49 +24,31 @@
 }
 
 \subsection{Problem Statement}
-
-      \subsubsection*{Background}
-      {
-        In a world where digital collaboration, remote work, and data accessibility are becoming increasingly essential, users often need real-time access to the most up-to-date versions of files across multiple devices. Traditional file-sharing services can be limited by connectivity issues, centralized storage constraints, or restrictions in updating files consistently across distributed devices. Hence, developing an efficient, decentralized file synchronization system to ensure continuous file availability and consistency across multiple devices in real time is crucial.
-      }
-
-      \subsubsection*{Objective}
-      {
-
-        This project aims to design, develop, and implement a Continuous File Synchronization System that enables users to automatically synchronize files across devices while maintaining data integrity, handling conflicts effectively, and ensuring minimal data transfer. The system will allow users to sync files locally and remotely, with features such as file versioning, conflict resolution, and support for multiple operating systems.
-      }
-
-      \subsubsection*{Scope}
-      {
-        The system will:
-        \begin{enumerate}
-          \item \textbf{Support Real-time Synchronization}: Files updated on one device should be reflected on all connected devices in real-time, ensuring minimal delay.
-          \item \textbf{Enable Cross-platform Compatibility}: The system should work on Windows, macOS, and Linux, allowing users to sync files across different operating systems.
-          \item \textbf{Ensure Data Integrity and Security}: Files should be transferred securely, and the system should ensure data integrity with mechanisms to verify file consistency.
-          \item \textbf{Handle Conflict Resolution}: The system should include a mechanism to handle conflicts when files are modified simultaneously on multiple devices.
-          \item \textbf{Implement Scalability}: The solution should scale efficiently to accommodate an increasing number of files, devices, and users.
-        \end{enumerate}
-      }
-
-      \subsubsection*{Functional Requirements:}
-      {
-        \begin{enumerate}
-          \item \textbf{Automatic Synchronization}: Detect file changes automatically and sync them across connected devices.
-          \item \textbf{Version Control}: Maintain version history of files to allow users to revert to previous versions if needed.
-          \item \textbf{Conflict Management}: Identify and resolve conflicts between different versions of the same file across devices.
-          \item \textbf{User Interface}: Provide an intuitive GUI for easy user interactions and configuration of sync settings.
-        \end{enumerate}
+      { In a world where digital collaboration, remote work, and data accessibility are becoming increasingly essential, users often need real-time access to the most up-to-date versions of files across multiple devices. Traditional file-sharing services can be limited by connectivity issues, centralized storage constraints, or restrictions in updating files consistently across distributed devices. Users struggle with maintaining consistent file versions across multiple devices, leading to:
+      \begin{itemize}
+        \item Version conflicts and lost work
+        \item Manual file transfer overhead
+        \item Storage redundancy
+        \item Security vulnerabilities in file sharing
+        \item Inconsistent file access across different platforms
+      \end{itemize}
+Hence, developing an efficient, decentralized file synchronization system to ensure continuous file availability and consistency across multiple devices in real time is crucial.
       }
 
     \subsection{Goals}
-      The primary goal of this project is to develop an efficient, user-friendly file synchronization system that addresses the limitations of existing solutions and provides an enhanced user experience for personal and professional use. Specifically, the objectives include:
+      \textbf{he primary goal of this project is:}
       \begin{itemize}
-        \item \textbf{Reliability and Data Integrity:} Ensure that files are synchronized accurately across devices with minimal risk of data corruption or loss. Implement robust mechanisms to verify the         integrity of synchronized data.
-
-        \item \textbf{Cross-Platform Compatibility:} Support multiple operating systems (e.g., Windows, macOS, Linux) and mobile platforms, allowing seamless synchronization across diverse devices.
-		    \item \textbf{Ease of Use:} Ensure the system is straightforward to install, configure, and operate, focusing on an intuitive user interface and clear instructions.
+        \item Develop a robust file synchronization system that maintains file consistency across multiple devices
+        \item Implement real-time synchronization with minimal latency
+		    \item Create an efficient conflict resolution mechanism
+        \item Ensure secure file transfer and storage
+      \end{itemize} \\ \textbf{From the Technical Objectives:}
+      \begin{itemize}
+        \item Design a scalable architecture supporting multiple concurrent users
+        \item Implement efficient delta-sync algorithms to minimize bandwidth usage
+        \item Develop cross-platform compatibility (Windows, macOS, Linux)
+        \item Create an intuitive user interface for managing synchronization
       \end{itemize}
-
     \subsection{Related Work}
 			\subsubsection{Currently Available Solutions}
         Several file synchronization solutions currently exist in the market, each offering distinct features and trade-offs in terms of performance, ease of use, and security. Some of the most popular file sync systems include:
