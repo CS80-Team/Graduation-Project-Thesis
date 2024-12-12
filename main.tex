@@ -40,7 +40,7 @@ Hence, developing an efficient, decentralized file synchronization system to ens
       \begin{itemize}
         \item Develop a robust file synchronization system that maintains file consistency across multiple devices
         \item Implement real-time synchronization with minimal latency
-		    \item Create an efficient conflict resolution mechanism
+                    \item Create an efficient conflict resolution mechanism
         \item Ensure secure file transfer and storage
       \end{itemize} \\ \textbf{From the Technical Objectives:}
       \begin{itemize}
@@ -50,7 +50,7 @@ Hence, developing an efficient, decentralized file synchronization system to ens
         \item Create an intuitive user interface for managing synchronization
       \end{itemize}
     \subsection{Related Work}
-			\subsubsection{Currently Available Solutions}
+                        \subsubsection{Currently Available Solutions}
         Several file synchronization solutions currently exist in the market, each offering distinct features and trade-offs in terms of performance, ease of use, and security. Some of the most popular file sync systems include:
 
     \begin{itemize}
@@ -62,58 +62,79 @@ Hence, developing an efficient, decentralized file synchronization system to ens
 
       \item \textbf{OneDrive}: Microsoft OneDrive is a cloud-based solution that integrates tightly with Windows and the Microsoft Office suite. It offers both cloud storage and file synchronization features, making it a strong option for users in the Microsoft ecosystem. OneDrive provides tools for sharing and collaboration, particularly for enterprise users. Like Google Drive and Dropbox, OneDrive is centralized and may not meet the privacy needs of all users.
 
-      \item \textbf{rsync}: rsync is a command-line utility for Unix-based systems that offers efficient, incremental file synchronization. While not specifically a file sync service, rsync provides high-speed sync capabilities over networks and is popular for backups and transferring large amounts of data. However, its usage requires familiarity with command-line operations, making it less accessible to everyday users. 
+      \item \textbf{rsync}: rsync is a command-line utility for Unix-based systems that offers efficient, incremental file synchronization. Although not specifically a file sync service, rsync provides high-speed sync capabilities over networks and is popular for backing up and transferring large amounts of data. However, its usage requires familiarity with command-line operations, making it less accessible to everyday users.
 
-      \item \textbf{Nextcloud}: Nextcloud is an open-source, self-hosted cloud storage and file synchronization solution. It allows users to set up their own server, keeping full control over data. Nextcloud provides additional collaborative tools and security options tailored for businesses and privacy-focused users. However, it requires setup and maintenance on the part of the user, which may not be suitable for non-technical users.
+      \item \textbf{Nextcloud}: Nextcloud is an open-source, self-hosted cloud storage and file synchronization solution. It allows users to set up their own server while maintaining full control over the data. Nextcloud provides additional collaborative tools and security options tailored for businesses and privacy-focused users. However, it requires setup and maintenance on the part of the user, which may not be suitable for nontechnical users.
   \end{itemize}
 
       \subsubsection{Limitations of Current Solutions}
       {
-        While each of these solutions has its own strengths, they share certain limitations. Centralized systems, like Dropbox, Google Drive, and OneDrive, come with privacy and data ownership concerns. Decentralized and self-hosted solutions, like Syncthing and Nextcloud, address privacy but can be challenging to configure for less technical users. These tools may also face performance and reliability issues when syncing large datasets over fluctuating network connections.
+        While each of these solutions has its own strengths, they share certain limitations. Centralized systems, such as Dropbox, Google Drive, and OneDrive, come with concerns about privacy and data ownership. Decentralized and self-hosted solutions, such as Syncthing and Nextcloud, address privacy, but can be challenging to configure for less technical users. These tools may also face performance and reliability issues when syncing large datasets over fluctuating network connections.
       }
       \subsubsection{Features Matrix}
-			
-		\subsection{Software Development Methodology Used: Scrum}
-        Scrum is an Agile framework that emphasizes iterative and incremental
-        development, with a focus on flexibility, collaboration, and continuous
-        improvement. \\
+
+                \subsection{Software Development Methodology Used: Scrum}
+        Scrum is an Agile framework that emphasizes iterative and incremental development, with a focus on flexibility, collaboration, and continuous improvement. \\
 
         We chose to use Scrum for the following reasons:
         \begin{enumerate}
           \item Adaptability: Scrum's iterative approach allows us to respond quickly to changing requirements and priorities, ensuring the final product aligns with the evolving needs of our users.
-          \item Transparency: The Scrum framework promotes transparency through regular feedback, reviews, and retrospectives, enabling our team to identify and address issues early in the development process.
-          \item Collaboration: Scrum encourages close collaboration between the development team, stakeholders, and the product owner, fostering a shared understanding of the project goals and requirements.
+          \item Transparency: The Scrum framework promotes transparency through regular feedback, reviews, and retrospectives, allowing our team to identify and address issues early in the development process.
+          \item Collaboration: Scrum encourages close collaboration between the development team, stakeholders and the product owner, fostering a shared understanding of the project goals and requirements.
           \item Efficiency: The Scrum methodology's emphasis on short development cycles (sprints) and continuous delivery helps us optimize our workflow and deliver value to our users in a timely manner.
           \item Continuous Improvement: Scrum's built-in mechanisms for retrospection and iteration allow our team to continuously learn, experiment, and improve our processes, leading to better quality and increased productivity over time.
         \end{enumerate}
-       By adopting the Scrum methodology, our team is well-equipped to navigate the complexities of this file synchronization system project and deliver a high-quality, responsive, and user-centric solution.
-	\section{Requirements Analysis}
-		\subsection{Surveys}
-		
-		\subsection{Results of (Part 2.1) represented as charts}
-		
-		\subsection{Functional Requirements}
-		
-		\subsection{Non-functional Requirements}
-		
-		\subsection{Use Case Diagrams}
-	
-	\section{Design}
-		\subsection{Sequence Diagrams}
-		
-		\subsection{ERD}
-		
-		\subsection{Data Flow Diagrams (DFD-level 0 and DFD-level 1)}
-		
-		\subsection{Algorithms}
-		
-		\subsection{UML Class Diagrams}
-	
-	\section{Implementation Aspects}
-		\subsection{Overall System Architecture (Blocks diagram)}
-		
-		\subsection{Tools, Technologies and/or Programming Languages}
-		
-		\subsection{Prototype}
-	
+       By adopting the Scrum methodology, our team is well equipped to navigate the complexities of this project of the file synchronization system and deliver a high-quality, responsive, and user-centric solution.
+        \section{Requirements Analysis}
+                \subsection{Surveys}
+
+                \subsection{Results of (Part 2.1) represented as charts}
+
+                \subsection{Functional Requirements}    
+                     
+                    \begin{enumerate}
+                        \item \textbf{Selective synchronization:} Users can choose specific files or folders to synchronize.
+                        \item \textbf{Real Time Synchronization:} Develop a system that synchronizes files and directories continuously, ensuring that changes made on one device are promptly reflected on all other connected devices, with minimal latency.
+                        \item \textbf{Cross-Platform Compatibility:} Enable file synchronization across a wide range of devices, regardless of the operating system. This feature allows users to access, edit, and update their files consistently across platforms, including Windows and Linux.
+                        \item \textbf{Conflict Resolution and Version Control:} Implement mechanisms to detect and resolve conflicts, such as when multiple devices attempt to modify the same file simultaneously. The system will allow users to view the version history and choose which version to keep.
+                        \item \textbf{Logging for edits:} 
+                         \begin{itemize}
+                             \item Track File Changes, Hook into the file system to detect changes (e.g., file creation, modification, or deletion).
+                             \item Monitor Peer Status: Detect new connections or disconnections.
+                         \end{itemize}   
+                    \end{enumerate}
+                        
+
+                \subsection{Non-functional Requirements}
+                    \begin{enumerate}
+                        \item \textbf{Scalability:} The system should support a large number of devices and users without poor performance, handling files with large sizes.
+                        \item \textbf{Data Security and Privacy:}  Implement encryption protocols for data transmission to protect files from unauthorized access. Ensure secure authentication methods and user permissions, thereby safeguarding sensitive information.
+                        \item \textbf{Resource Efficiency:} Design the system to use minimal bandwidth and storage, utilizing delta synchronization (transferring only modified parts of a file) and data compression techniques to reduce data transfer size and optimize storage use.
+                        \item \textbf{Reliability: }
+                        \begin{itemize}
+                            \item Availability: The system should have minimal downtime as possible.
+                            \item Data integrity: Ensure data consistency across all synchronized devices, even after unexpected interruptions.
+                            \item Fault tolerance: Handle failures gracefully, ensuring no data loss.
+                        \end{itemize}
+                    \end{enumerate}
+                \subsection{Use Case Diagrams}
+
+        \section{Design}
+                \subsection{Sequence Diagrams}
+
+                \subsection{ERD}
+
+                \subsection{Data Flow Diagrams (DFD-level 0 and DFD-level 1)}
+
+                \subsection{Algorithms}
+
+                \subsection{UML Class Diagrams}
+
+        \section{Implementation Aspects}
+                \subsection{Overall System Architecture (Blocks diagram)}
+
+                \subsection{Tools, Technologies and/or Programming Languages}
+
+                \subsection{Prototype}
+
 \end{document}
